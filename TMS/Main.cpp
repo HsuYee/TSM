@@ -31,6 +31,7 @@ void Menu()
     cout << "3) Exit \n";
     cout << "4) Error error \n";
     cout << "Select a choice: ";
+    cout << "MAKE NEW CHANGES..."
     cin >> select;
     system("clear");
     

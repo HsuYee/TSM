@@ -1,0 +1,290 @@
+ void displayall1()
+    {
+     
+        ifstream lectureRoom("lectureroombookings.txt");
+        string  subject , lecturer;
+        int dateMonth;
+        string duration2[100];
+        string  subject1[100] , lecturer1[100];
+        int dateMonth1[100];
+    int id1[100];
+    int id;
+    int roomNo1[100];
+    int roomNo; 
+    int levelNo; 
+    int levelNo1[100];
+    
+    int dateDay;
+    int dateDay1[100];
+    int dateYear;
+    int dateYear1[100];
+    int time;
+    int time1[100];
+   
+    int duration;
+    int duration1[100]; 
+       
+    int i =0;
+     char d;
+     string f;
+     string line;
+     
+     
+     while(getline(lectureRoom, line) && i<100)
+     {
+     
+  lectureRoom >> id >> d >> f  >> roomNo >> d >> f >> levelNo >> d >> dateDay >> d >>dateMonth >> d >>  dateYear >> d >> time >> d >> duration ;
+     
+         
+         
+         
+          
+         id1[i] = id;
+         roomNo1[i] = roomNo;
+         levelNo1[i] = levelNo;
+         dateDay1[i] = dateDay;
+         dateMonth1[i] = dateMonth;
+         dateYear1[i] = dateYear;
+         time1[i] = time;
+         duration1[i] = duration;
+         
+        // cout << id1[i] << "\n" << roomNo1[i] << "\n" << levelNo1[i] << dateDay1[i]<< "\n" << dateMonth1[i]<< "\n" << dateYear1[i] << "\n" << time1[i] << "\n" << duration1[i] ;
+         
+         
+        
+         
+         
+         
+         ++i;
+         
+         
+         
+         
+         
+         
+     
+     
+     
+             
+     }
+         
+         while (i-->0)
+    {
+        
+        cout << id1[i] << "\n" << roomNo1[i] << "\n" << levelNo1[i] << dateDay1[i]<< "\n" << dateMonth1[i]<< "\n" << dateYear1[i] << "\n" << time1[i] << "\n" << duration1[i] ;
+        
+        
+        
+    }
+     
+     
+     
+     cin.get();
+     main();
+     
+     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       const int N=100;
+       
+        string dateMonth1[N] , subject1[N] , lecturer1[N];
+    
+    
+    //declaring string arrays for printing out data in the database
+    string id1[N];
+    string roomNo1[N]; string levelNo1[N]; string dateDay1[N];
+    string dateYear1[N]; string timeHours1[N]; string timeMinutes1[N];
+    string duration1[N];
+    
+    //variables for conversion
+    int convertid[N];
+    int convertRoomNo[N];
+    int convertLevelNo[N]; 
+    int convertDay[N];
+    int convertMonth[N];
+    int convertYear[N];
+    int convertTimeHours[N];
+    int convertTimeMinutes[N];
+    int convertDuration[N];
+    int timeFrame[N];
+    
+    
+    
+    //variables for user inputs
+    int roomNo;       
+    int levelNo;
+    int dateDay;
+    int dateMonth;
+    int dateYear;
+    int timeHours;
+    int timeMinutes;
+    int duration;
+    string subject;
+    string lecturer;
+    string room[N];
+    string level[N];
+    
+    //open the file and extract the data from the file
+    std :: ifstream tally("lectureroombookings.txt");
+     string line;
+    int i =0;
+    
+    //using a loop to run through the lines of data stored in he file
+    while(getline(tally, line) && i<N)
+     {   
+        
+         //use a stringstream to separate the colon out of the line
+        //e.g. 54: print out 54 excluding the colon ":"
+         //std::cout << "reading line: " << line << '\n'; //flash out raw data
+         std::istringstream s(line);
+         
+         getline(s, id1[i] , ':');
+         getline(s, room[i] , ' ');
+         getline(s, roomNo1[i],  ':');
+         getline(s, level[i], ':');
+         getline(s, levelNo1[i], ':'); 
+         getline(s, dateDay1[i], '-' );
+         getline(s, dateMonth1[i], '-');
+         getline(s, dateYear1[i] , ':');
+         getline(s, timeHours1[i], ':' );
+        // getline(s, timeMinutes1[i], ':' );
+         getline(s, duration1[i] , ':');
+         getline(s, subject1[i], ':');
+         getline(s, lecturer1[i]);
+         
+         
+         
+         char d; //delimiter semi colon
+         
+         s >> id1[i] >> d  >> room[i] >> roomNo1[i] >> d >> level[i] >> levelNo1[i] >> d >> dateDay1[i] >> d
+            >> dateMonth1[i] >> d >> dateYear1[i] >> d >> timeHours1[i] >> timeMinutes1[i] >>d
+           >> duration1[i] >> d >> subject1[i] >> d >> lecturer1[i];
+         
+         
+    
+    
+   
+   
+    
+    
+    
+       /*
+        Do a conversion to tally the database with the user iputs to make sure they do not clash
+        */ 
+        stringstream(id1[i]) >> convertid[i];
+        stringstream(roomNo1[i]) >> convertRoomNo[i];
+        stringstream(levelNo1[i]) >> convertLevelNo[i];
+        stringstream(dateDay1[i]) >> convertDay[i];
+        stringstream(dateMonth1[i]) >> convertMonth[i];
+        stringstream(dateYear1[i]) >> convertYear[i];
+        stringstream(timeHours1[i]) >> convertTimeHours[i];
+        stringstream(timeMinutes1[i]) >> convertTimeMinutes[i];
+        stringstream(duration1[i]) >> convertDuration[i];
+        
+        timeFrame[i] = convertTimeHours[i] + convertDuration[i]*100;
+       
+       
+        
+        
+	 
+	
+   
+    
+         ++i;
+     } 
+
+
+
+int id1 [100];
+    int id2;
+    int room1[100];
+    int room2;
+    int level1[100];
+    int level2;
+    int dateDay1[100];
+    int dateDay2;
+    int dateMonth1[100];
+    int dateMonth2;
+    int dateYear1[100];
+    int dateYear2;
+    int timeHours1[100];
+    int timeHours2;
+    int i =0;
+    string line;
+    char d;
+    string room;
+    string level;
+    ifstream tally ("lectureroombookings.txt");
+          while(getline(tally, line) && i<100)
+          {
+           tally >> id2 >> d >> room >> room2 >> d >> level >> level2 >> d >> dateDay2 >> d >> dateMonth2 >> d >> dateYear2 >> d >> timeHours2 ;
+          
+              id1[i] = id2;
+              room1[i] = room2;
+              level1[i] = level2;
+              dateDay1[i] = dateDay2;
+              dateMonth1[i] = dateMonth2;
+              dateYear1[i] = dateYear2;
+              timeHours1[i] = timeHours2;
+              cout << id1[i] <<  room1[i] << level1[i] << dateDay1[i] << dateMonth1[i] << dateYear1[i] << timeHours1[i] <<endl;
+              ++i;
+          
+          
+          }
+
+int id1 [100];
+    int id2;
+    int room1[100];
+    int room2;
+    int level1[100];
+    int level2;
+    int dateDay1[100];
+    int dateDay2;
+    int dateMonth1[100];
+    int dateMonth2;
+    int dateYear1[100];
+    int dateYear2;
+    int timeHours1[100];
+    int timeHours2;
+    int i =0;
+    string line;
+    char d;
+    string room;
+    string level;
+    ifstream tally ("lectureroombookings.txt");
+          while(getline(tally, line) && i<100)
+          {
+           tally >> id2 >> d >> room >> room2 >> d >> level >> level2 >> d >> dateDay2 >> d >> dateMonth2 >> d >> dateYear2 >> d >> timeHours2 ;
+          
+              id1[i] = id2;
+              room1[i] = room2;
+              level1[i] = level2;
+              dateDay1[i] = dateDay2;
+              dateMonth1[i] = dateMonth2;
+              dateYear1[i] = dateYear2;
+              timeHours1[i] = timeHours2;
+              cout << id1[i] <<  room1[i] << level1[i] << dateDay1[i] << dateMonth1[i] << dateYear1[i] << timeHours1[i] <<endl;
+              ++i;
+          
+          
+          }
+     
+lectureRoom << id <<": "<< "room " << roomNo << ": "<< "level " << levelNo << ": "<< dateDay <<"-" 
+            << dateMonth << "-" <<  dateYear<< ": " << setfill('0')    
+            << setw(2) << timeHours  << setw(2) << timeMinutes <<setw(2)<<": "
+            << duration <<": " << subject <<": "<< lecturer <<endl;
+

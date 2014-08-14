@@ -35,10 +35,16 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+<<<<<<< HEAD
 	${OBJECTDIR}/Candidate.o \
 	${OBJECTDIR}/ExaminableTopics.o \
 	${OBJECTDIR}/Login.o \
 	${OBJECTDIR}/Main.o
+=======
+	${OBJECTDIR}/Main.o \
+	${OBJECTDIR}/Testing.o \
+	${OBJECTDIR}/login.o
+>>>>>>> origin/master
 
 
 # C Compiler Flags
@@ -84,6 +90,16 @@ ${OBJECTDIR}/Main.o: Main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I/usr/include/c++ `pkg-config --cflags cppunit`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Main.o Main.cpp
+
+${OBJECTDIR}/Testing.o: Testing.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Testing.o Testing.cpp
+
+${OBJECTDIR}/login.o: login.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/login.o login.cpp
 
 # Subprojects
 .build-subprojects:

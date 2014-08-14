@@ -16,6 +16,9 @@
       <itemPath>ExaminableTopics.cpp</itemPath>
       <itemPath>Login.cpp</itemPath>
       <itemPath>Main.cpp</itemPath>
+      <itemPath>Testing.cpp</itemPath>
+      <itemPath>login.cpp</itemPath>
+      <itemPath>testfile</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -57,6 +60,12 @@
       </item>
       <item path="Main.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="Testing.cpp" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="login.cpp" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testfile" ex="false" tool="3" flavor2="0">
+      </item>
     </conf>
     <conf name="Release" type="1">
       <toolsSet>
@@ -85,6 +94,12 @@
       <item path="Login.cpp" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Testing.cpp" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="login.cpp" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="testfile" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

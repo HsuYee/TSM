@@ -29,7 +29,6 @@ void Menu()
     cout << "1) Login as Lecturer \n";
     cout << "2) Login as Student \n";
     cout << "3) Exit \n";
-    cout << "4) Error error \n";
     cout << "Select a choice: ";
     cin >> select;
     system("clear");
@@ -54,7 +53,7 @@ void Menu()
     else{
         
         cout << "Invalid Input... \n";
-        
+        cout << "added new";
     }
 }
 

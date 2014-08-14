@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <string>
 
@@ -20,7 +19,13 @@ int main( void )
     cin >> loginpass;
     
     if(login == username && loginpass == password)
-			
+			{
+				cout << "User credentials are correct!!!" << endl;
+			}
+			else
+			{
+				cout << "Invalid login details" << endl;
+			}
     
 
     

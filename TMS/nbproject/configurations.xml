@@ -12,6 +12,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>Candidate.cpp</itemPath>
+      <itemPath>ExaminableTopics.cpp</itemPath>
+      <itemPath>Login.cpp</itemPath>
       <itemPath>Main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -35,7 +38,23 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>/usr/include/c++</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerOptionItem>`pkg-config --libs cppunit`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
       </compileType>
+      <item path="Candidate.cpp" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ExaminableTopics.cpp" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Login.cpp" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="Main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
@@ -59,6 +78,12 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="Candidate.cpp" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ExaminableTopics.cpp" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Login.cpp" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="Main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>

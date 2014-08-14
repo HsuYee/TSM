@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/Candidate.o \
 	${OBJECTDIR}/ExaminableTopic.o \
+	${OBJECTDIR}/Login.o \
 	${OBJECTDIR}/Main.o \
 	${OBJECTDIR}/Question.o \
 	${OBJECTDIR}/Test.o \
@@ -76,6 +77,11 @@ ${OBJECTDIR}/ExaminableTopic.o: ExaminableTopic.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I/usr/include/c++ `pkg-config --cflags cppunit`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ExaminableTopic.o ExaminableTopic.cpp
+
+${OBJECTDIR}/Login.o: Login.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g `pkg-config --cflags cppunit`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Login.o Login.cpp
 
 ${OBJECTDIR}/Main.o: Main.cpp 
 	${MKDIR} -p ${OBJECTDIR}

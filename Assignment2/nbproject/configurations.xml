@@ -19,6 +19,7 @@
                    projectFiles="true">
       <itemPath>Candidate.cpp</itemPath>
       <itemPath>ExaminableTopic.cpp</itemPath>
+      <itemPath>Login.cpp</itemPath>
       <itemPath>Main.cpp</itemPath>
       <itemPath>Question.cpp</itemPath>
       <itemPath>Test.cpp</itemPath>
@@ -64,6 +65,8 @@
       </item>
       <item path="ExaminableTopic.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Login.cpp" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="Main.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Question.cpp" ex="false" tool="1" flavor2="0">
@@ -106,6 +109,8 @@
       <item path="ExaminableTopic.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ExaminableTopic.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Login.cpp" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Main.cpp" ex="false" tool="1" flavor2="0">
       </item>

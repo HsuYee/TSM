@@ -1,0 +1,9 @@
+1) create the cpp file
+2) go to terminal
+3) go to git folder and into the project folder (TestManagementSystem)
+4) type below >>
+
+	git add <cpp file name>
+	git commit -m "<Updated Message>"
+	git push origin master 
+	>>type in user name and password

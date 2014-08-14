@@ -53,7 +53,7 @@ void Menu()
     else{
         
         cout << "Invalid Input... \n";
-        
+        cout << "added new";
     }
 }
 
